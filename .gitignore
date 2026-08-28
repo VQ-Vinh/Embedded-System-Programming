@@ -1,0 +1,53 @@
+# CMake and Ninja build trees
+/build/
+/cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+build.ninja
+.ninja_deps
+.ninja_log
+compile_commands.json
+
+# Compiler and linker outputs
+*.a
+*.bin
+*.d
+*.dep
+*.elf
+*.hex
+*.list
+*.lst
+*.map
+*.o
+*.obj
+
+# STM32CubeMX transient metadata and backup files
+/.mxproject
+*.ioc.bak
+*.ioc.old
+
+# STM32CubeIDE metadata when the CMake project is opened in CubeIDE
+/.cproject
+/.project
+/.settings/
+/Debug/
+/Release/
+
+# Editors and local tooling
+/.idea/
+/.vscode/
+*.code-workspace
+*.suo
+*.user
+
+# Operating-system files
+.DS_Store
+Desktop.ini
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.swp
+*.tmp
+*~
