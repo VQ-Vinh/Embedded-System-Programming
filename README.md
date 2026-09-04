@@ -111,7 +111,11 @@ Firmware sau khi build nằm tại:
 
 ```text
 build\Debug\Src.elf
+build\Debug\Src.hex
+build\Debug\Src.bin
 build\Release\Src.elf
+build\Release\Src.hex
+build\Release\Src.bin
 ```
 
 Thư mục `build` là output cục bộ và không được commit lên Git.
