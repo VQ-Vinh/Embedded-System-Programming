@@ -74,5 +74,8 @@ if errorlevel 1 (
     exit /b 5
 )
 
-echo [SUCCESS] Firmware built at build\%BUILD_CONFIG%\Src.elf
+echo [SUCCESS] Firmware outputs generated in build\%BUILD_CONFIG%:
+echo          - Src.elf
+echo          - Src.hex
+echo          - Src.bin
 exit /b 0
