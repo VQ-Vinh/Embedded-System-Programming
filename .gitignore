@@ -36,7 +36,9 @@ compile_commands.json
 
 # Editors and local tooling
 /.idea/
-/.vscode/
+/.vscode/*
+# * Dùng chung cấu hình IntelliSense (đọc build/Debug/compile_commands.json)
+!/.vscode/c_cpp_properties.json
 *.code-workspace
 *.suo
 *.user
@@ -51,3 +53,8 @@ Thumbs.db
 *.swp
 *.tmp
 *~
+
+# Chương trình kiểm thử biên dịch trên máy tính
+tests/test_logic
+tests/test_logic.exe
+*.csv

@@ -1,0 +1,35 @@
+{
+    "configurations": [
+        {
+            "name": "STM32F407 (CMake Debug)",
+            "compileCommands": "${workspaceFolder}/build/Debug/compile_commands.json",
+            "compilerArgs": [
+                "-mcpu=cortex-m4",
+                "-mfpu=fpv4-sp-d16",
+                "-mfloat-abi=hard"
+            ],
+            "intelliSenseMode": "gcc-arm",
+            "cStandard": "gnu11",
+            "defines": [
+                "DEBUG",
+                "STM32F407xx",
+                "USE_HAL_DRIVER"
+            ],
+            "includePath": [
+                "${workspaceFolder}/App/Inc",
+                "${workspaceFolder}/App/Drivers",
+                "${workspaceFolder}/App/Services",
+                "${workspaceFolder}/App/Tasks",
+                "${workspaceFolder}/Core/Inc",
+                "${workspaceFolder}/Drivers/STM32F4xx_HAL_Driver/Inc",
+                "${workspaceFolder}/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy",
+                "${workspaceFolder}/Drivers/CMSIS/Device/ST/STM32F4xx/Include",
+                "${workspaceFolder}/Drivers/CMSIS/Include",
+                "${workspaceFolder}/Middlewares/Third_Party/FreeRTOS/Source/include",
+                "${workspaceFolder}/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2",
+                "${workspaceFolder}/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"
+            ]
+        }
+    ],
+    "version": 4
+}
