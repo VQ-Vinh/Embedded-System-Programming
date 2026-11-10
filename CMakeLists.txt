@@ -43,14 +43,42 @@ target_link_directories(${CMAKE_PROJECT_NAME} PRIVATE
 )
 
 # Add sources to executable
+# * Mã ứng dụng cân kiểm tra: driver (App/Drivers), logic thuần (App/Services)
+#   và 5 task FreeRTOS (App/Tasks). Thêm file mới vào đúng nhóm bên dưới.
 target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user sources here
+    App/Drivers/dwt_delay.c
+    App/Drivers/hx711.c
+    App/Drivers/keypad.c
+    App/Drivers/photo_sensor.c
+    App/Drivers/indicator.c
+    App/Drivers/flash_store.c
+    App/Drivers/tft.c
+    App/Services/fmt.c
+    App/Services/scale_filter.c
+    App/Services/weigh_fsm.c
+    App/Services/num_input.c
+    App/Services/config.c
+    App/Services/app_logic.c
+    App/Tasks/app_main.c
+    App/Tasks/task_sensor.c
+    App/Tasks/task_keypad.c
+    App/Tasks/task_main.c
+    App/Tasks/task_display.c
+    App/Tasks/task_uart.c
 )
 
 # Add include paths
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user defined include paths
+    App/Drivers
+    App/Services
+    App/Tasks
 )
+
+# ! main.h (do CubeMX quản lý) include app_types.h nên mọi target dùng
+# ! stm32cubemx đều cần thấy App/Inc.
+target_include_directories(stm32cubemx INTERFACE ${CMAKE_SOURCE_DIR}/App/Inc)
 
 # Add project symbols (macros)
 target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE
