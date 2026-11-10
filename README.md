@@ -2,6 +2,8 @@
 
 Firmware FreeRTOS cho STM32F407VGT6, được cấu hình bằng STM32CubeMX và build bằng CMake trên Windows.
 
+Đề tài: **mô hình kiểm tra khối lượng và đếm sản phẩm** (load cell + HX711, cảm biến quang, keypad 4x4, TFT SPI, LED/còi, UART). Hướng dẫn nối dây, chạy lần đầu, hiệu chuẩn và kiểm thử: [docs/HUONG_DAN.md](docs/HUONG_DAN.md). Nạp file nào và nối chân ra sao: [docs/NAP_KIT_VA_NOI_DAY.md](docs/NAP_KIT_VA_NOI_DAY.md).
+
 ## 1. Công cụ cần thiết
 
 Mỗi thành viên cần cài đặt các công cụ sau trước khi làm việc với repository:
@@ -148,6 +150,10 @@ Nếu flash không kết nối được, kiểm tra nguồn target, dây `SWDIO`
 ## 6. Cấu trúc chính của repository
 
 ```text
+App/                        Mã ứng dụng: Drivers, Services (logic thuần), Tasks (5 task FreeRTOS)
+tests/                      Kiểm thử logic trên máy tính (sh tests/run_tests.sh)
+tools/                      serial_logger.py (ghi CSV), gen_font.py
+docs/                       Hướng dẫn và ảnh mô phỏng màn hình
 Core/                       Mã khởi tạo và mã ứng dụng
 Drivers/                    CMSIS và STM32 HAL
 Middlewares/                FreeRTOS và CMSIS-RTOS v2
